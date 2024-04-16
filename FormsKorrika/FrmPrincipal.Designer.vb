@@ -206,26 +206,26 @@ Partial Class FrmPrincipal
         '
         Me.DefinirKmToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.DefinirKmToolStripMenuItem.Name = "DefinirKmToolStripMenuItem"
-        Me.DefinirKmToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.DefinirKmToolStripMenuItem.Size = New System.Drawing.Size(203, 26)
         Me.DefinirKmToolStripMenuItem.Text = "Definir km"
         '
         'FinanciarKmToolStripMenuItem
         '
         Me.FinanciarKmToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.FinanciarKmToolStripMenuItem.Name = "FinanciarKmToolStripMenuItem"
-        Me.FinanciarKmToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.FinanciarKmToolStripMenuItem.Size = New System.Drawing.Size(203, 26)
         Me.FinanciarKmToolStripMenuItem.Text = "Financiar Km"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(221, 6)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(200, 6)
         '
         'FinalizarToolStripMenuItem
         '
         Me.FinalizarToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.FinalizarToolStripMenuItem.Name = "FinalizarToolStripMenuItem"
-        Me.FinalizarToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.FinalizarToolStripMenuItem.Size = New System.Drawing.Size(203, 26)
         Me.FinalizarToolStripMenuItem.Text = "Finalizar"
         '
         'FrmPrincipal

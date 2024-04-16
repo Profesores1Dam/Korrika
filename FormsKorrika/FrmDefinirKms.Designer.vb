@@ -40,7 +40,7 @@ Partial Class FrmDefinirKms
         Me.txtNumKm.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNumKm.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.txtNumKm.Location = New System.Drawing.Point(447, 140)
-        Me.txtNumKm.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtNumKm.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNumKm.Name = "txtNumKm"
         Me.txtNumKm.Size = New System.Drawing.Size(51, 26)
         Me.txtNumKm.TabIndex = 48
@@ -74,7 +74,7 @@ Partial Class FrmDefinirKms
         Me.txtDireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDireccion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.txtDireccion.Location = New System.Drawing.Point(447, 226)
-        Me.txtDireccion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtDireccion.Margin = New System.Windows.Forms.Padding(4)
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(433, 26)
         Me.txtDireccion.TabIndex = 53
@@ -96,7 +96,7 @@ Partial Class FrmDefinirKms
         Me.txtLocalidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtLocalidad.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.txtLocalidad.Location = New System.Drawing.Point(447, 297)
-        Me.txtLocalidad.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtLocalidad.Margin = New System.Windows.Forms.Padding(4)
         Me.txtLocalidad.Name = "txtLocalidad"
         Me.txtLocalidad.Size = New System.Drawing.Size(433, 26)
         Me.txtLocalidad.TabIndex = 59
@@ -118,7 +118,7 @@ Partial Class FrmDefinirKms
         Me.txtProvincia.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtProvincia.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.txtProvincia.Location = New System.Drawing.Point(445, 372)
-        Me.txtProvincia.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtProvincia.Margin = New System.Windows.Forms.Padding(4)
         Me.txtProvincia.Name = "txtProvincia"
         Me.txtProvincia.Size = New System.Drawing.Size(257, 26)
         Me.txtProvincia.TabIndex = 61
@@ -129,7 +129,7 @@ Partial Class FrmDefinirKms
         Me.btnVolver.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnVolver.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnVolver.Location = New System.Drawing.Point(611, 460)
-        Me.btnVolver.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.btnVolver.Margin = New System.Windows.Forms.Padding(5)
         Me.btnVolver.Name = "btnVolver"
         Me.btnVolver.Size = New System.Drawing.Size(139, 34)
         Me.btnVolver.TabIndex = 63
@@ -141,7 +141,7 @@ Partial Class FrmDefinirKms
         Me.btnDefinirKm.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDefinirKm.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnDefinirKm.Location = New System.Drawing.Point(357, 460)
-        Me.btnDefinirKm.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.btnDefinirKm.Margin = New System.Windows.Forms.Padding(5)
         Me.btnDefinirKm.Name = "btnDefinirKm"
         Me.btnDefinirKm.Size = New System.Drawing.Size(139, 34)
         Me.btnDefinirKm.TabIndex = 62

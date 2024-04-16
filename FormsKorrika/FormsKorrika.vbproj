@@ -93,6 +93,7 @@
     <Compile Include="FrmPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -143,6 +144,10 @@
     <ProjectReference Include="..\Entidades\Entidades.vbproj">
       <Project>{7bbee4fd-1e6c-48d7-ba28-cf9ddaa14d1b}</Project>
       <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GestionKorrika\GestionKorrika.vbproj">
+      <Project>{38b9b7a3-21e3-4501-bb65-2d3098e76ffa}</Project>
+      <Name>GestionKorrika</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

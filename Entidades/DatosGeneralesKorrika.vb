@@ -15,6 +15,6 @@
         Me.CantKms = cantKms
     End Sub
     Public Overrides Function ToString() As String
-        Return $"Korrika {NKorrika} {Eslogan}, desde {FechaInicio.ToShortDateString} hasta {FechaFin.ToShortDateString} corriendo {CantKms}"
+        Return $"Korrika {NKorrika} '{Eslogan}', desde {FechaInicio} hasta {FechaFin} corriendo {CantKms} kilómetros."
     End Function
 End Class

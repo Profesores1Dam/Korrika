@@ -1,12 +1,9 @@
 ﻿Public Class KilometroFinanciado
-
+    Inherits Kilometro
     Public Property Organizacion As String
     Public Property Euros As Decimal
-    Public Sub New(numKm As Integer, Direccion As String, localidad As String, provincia As String)
-        MyBase.New(numKm, Direccion, localidad, provincia)
-    End Sub
-    Public Sub New(organizacion As String, euros As Decimal, numKm As Integer, Direccion As String, localidad As String, provincia As String)
-        Me.New(numKm, Direccion, localidad, provincia)
+    Public Sub New(kilometro As Kilometro, organizacion As String, euros As Decimal)
+        MyBase.New(kilometro.NumKm, kilometro.Direccion, kilometro.Localidad, kilometro.Provincia)
         Me.Organizacion = organizacion
         Me.Euros = euros
     End Sub
