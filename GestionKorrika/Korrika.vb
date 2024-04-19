@@ -1,7 +1,9 @@
-﻿Imports Entidades
+﻿Imports System.Diagnostics.Eventing.Reader
+Imports System.IO
+Imports Entidades
 
 Public Class Korrika
-    Public Property DatosGenerales As DatosGeneralesKorrika
+    Public Property datosGenerales As DatosGeneralesKorrika
     Private Property _Provincias As New List(Of String) From {"araba", "gipuzkoa", "nafarroa", "bizkaia", "zuberoa", "nafarra behera", "lapurdi"}
     Public ReadOnly Property Provincias
         Get
@@ -27,9 +29,23 @@ Public Class Korrika
     Public Sub New(nKorrika As Byte, anyo As Integer, eslogan As String, fechaInicio As Date, fechaFin As Date, cantKms As Integer)
         Me.New(New DatosGeneralesKorrika(nKorrika, anyo, eslogan, fechaInicio, fechaFin, cantKms))
     End Sub
-    Public Sub New(datosGeneralesKorrika As DatosGeneralesKorrika)
-        DatosGenerales = datosGeneralesKorrika
-        CrearKilometros(DatosGenerales.CantKms)
+
+    Public Sub New(datosGenerales As DatosGeneralesKorrika)
+        Me.datosGenerales = datosGenerales
+    End Sub
+
+    Public Sub New(nKorrika As Byte)
+        LeerFichero(nKorrika)
+    End Sub
+
+    Public Sub New(datosG As DatosGeneralesKorrika, ByRef msgError As String)
+        Dim numKorrika As Byte = datosG.NKorrika
+        Dim fichero As String = $"Korrika{numKorrika}.txt"
+        If File.Exists(fichero) Then
+            msgError = $"Ya existe el fichero {fichero}"
+        End If
+        CrearKilometros(datosG.CantKms)
+        CambiosGuardar(datosG.NKorrika, datosG.CantKms, datosG.Eslogan, datosG.Anyo, datosG.FechaFin, datosG.FechaInicio)
     End Sub
     Private Sub CrearKilometros(cantKm)
         For i = 1 To cantKm
@@ -37,7 +53,7 @@ Public Class Korrika
         Next
     End Sub
     Public Overrides Function ToString() As String
-        Return DatosGenerales.ToString
+        Return datosGenerales.ToString
     End Function
 
     Public Function DefinirKm(numKm As Integer, direccion As String, localidad As String, provincia As String) As String
@@ -121,5 +137,31 @@ Public Class Korrika
         Return kmLibres
     End Function
 
+    Private Function LeerFichero(numKorrika As Integer) As String
+        Dim rutaFichero As String = $"./Ficheros/Korrika{numKorrika}.txt"
+        Dim existeFichero As Boolean = File.Exists(rutaFichero)
+        If Not existeFichero Then Return $"El fichero {rutaFichero} no existe"
+        Dim lineas() As String = File.ReadAllLines(rutaFichero)
+
+        Dim datosG As String() = lineas(0).Split("*")
+        Dim newGestion As New DatosGeneralesKorrika(datosG(0), datosG(1), datosG(2), datosG(3), datosG(4), datosG(5))
+
+        For i = 1 To lineas.Length - 1
+            Dim datos As String() = lineas(i).Split("*")
+            Dim Km As Kilometro = New Kilometro(datos(0), datos(1), datos(2), datos(3))
+            If datos.Count = 5 Then
+                Dim kmFinanciados As KilometroFinanciado = New KilometroFinanciado(Km, datos(3), datos(4))
+                _Kilometros.Add(kmFinanciados)
+            Else
+                _Kilometros.Add(Km)
+            End If
+        Next
+    End Function
+    Public Sub CambiosGuardar(NKorrika As Byte, CantKms As Integer, Eslogan As String, Anyo As Integer, FechaFin As Date, FechaInicio As Date)
+        Dim ruta As String = $"./Ficheros/Korrika{NKorrika}.txt"
+        Dim rutaExiste As Boolean = File.Exists(ruta)
+        Dim Informacion As String = $"{NKorrika}{CantKms}{Eslogan}{Anyo}{FechaFin}*{FechaInicio}"
+        File.WriteAllLines(ruta, Informacion)
+    End Sub
 End Class
 

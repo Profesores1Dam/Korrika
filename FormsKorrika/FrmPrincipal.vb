@@ -55,6 +55,7 @@ Public Class FrmPrincipal
             End If
         End If
         korrika = New Korrika(txtNumKorrika.Text, txtAnyo.Text, txtEslogan.Text, txtFechaInicio.Text, txtFechaFin.Text, txtCantKms.Text)
+
     End Sub
 
     Private Sub DefinirKmToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DefinirKmToolStripMenuItem.Click, FinanciarKmToolStripMenuItem.Click
@@ -81,4 +82,6 @@ Public Class FrmPrincipal
     Private Sub FrmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+
 End Class
