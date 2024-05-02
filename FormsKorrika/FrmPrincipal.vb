@@ -54,7 +54,7 @@ Public Class FrmPrincipal
                 Exit Sub
             End If
         End If
-        korrika = New Korrika(txtNumKorrika.Text, txtAnyo.Text, txtEslogan.Text, txtFechaInicio.Text, txtFechaFin.Text, txtCantKms.Text)
+        korrika = New Korrika(txtNumKorrika.Text, txtAnyo.Text, txtEslogan.Text, txtFechaInicio.Text, txtFechaFin.Text, txtCantKms.Text) ' todo Deberían ser las variables y llamar al de errores
 
     End Sub
 
